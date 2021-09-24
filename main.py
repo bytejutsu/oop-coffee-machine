@@ -1,4 +1,4 @@
-from menu import Menu, MenuItem
+from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
@@ -23,9 +23,6 @@ def display_menu(p_menu):
 def process_coffee_order(order):
     if coffee_maker.is_resource_sufficient(order) and money_machine.make_payment(order.cost):
         coffee_maker.make_coffee(order)
-
-    else:
-        print(f"Sorry there is not enough ingredients")
 
 
 def display_menu():
