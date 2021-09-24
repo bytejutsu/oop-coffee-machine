@@ -21,10 +21,8 @@ def display_menu(p_menu):
 
 
 def process_coffee_order(order):
-    if coffee_maker.is_resource_sufficient(order):
-        cost = order.cost
-        if money_machine.make_payment(cost):
-            coffee_maker.make_coffee(order)
+    if coffee_maker.is_resource_sufficient(order) and money_machine.make_payment(order.cost):
+        coffee_maker.make_coffee(order)
 
     else:
         print(f"Sorry there is not enough ingredients")
