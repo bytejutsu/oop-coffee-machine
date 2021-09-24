@@ -9,6 +9,7 @@ menu = Menu()
 
 def get_report():
     coffee_maker.report()
+    money_machine.report()
 
 
 def turn_off():
